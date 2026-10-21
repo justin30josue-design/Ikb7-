@@ -1,0 +1,34 @@
+{
+  "geode": "4.0.0",
+  "gd": {
+    "win": "2.2081",
+    "mac": "2.2081",
+    "android": "2.2081"
+  },
+  "id": "yourname.dynamic_input_buffer",
+  "name": "Dynamic Input Buffer",
+  "version": "v1.0.0",
+  "developer": "YourName",
+  "description": "Adjustable keyboard input buffering system with configurable delay and diagnostic overlays.",
+  "dependencies": [],
+  "settings": {
+    "buffer-frames": {
+      "name": "Buffer Delay (Frames)",
+      "description": "Number of physics frames (240Hz reference) to delay keyboard inputs. 0 = Unbuffered/Vanilla.",
+      "type": "int",
+      "default": 0,
+      "min": 0,
+      "max": 10,
+      "control": {
+        "slider": true,
+        "snap": 1
+      }
+    },
+    "show-diagnostics": {
+      "name": "Show Input Diagnostics",
+      "description": "Display current frame buffer depth and pending queue size on screen during gameplay.",
+      "type": "bool",
+      "default": true
+    }
+  }
+}
