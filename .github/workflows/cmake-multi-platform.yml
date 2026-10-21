@@ -1,0 +1,20 @@
+name: Build Geode Mod
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Build Mod with Geode SDK
+      uses: geode-sdk/build-geode-mod@main
+      id: build
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dynamic-input-buffer
+        path: ${{ steps.build.outputs.build-output }}
+        
